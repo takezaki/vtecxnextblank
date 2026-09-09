@@ -31,11 +31,10 @@ module.exports = (env, argv) => {
       rules: [
         {
           test: /\.tsx?$/,
-          use: {
-            loader: 'ts-loader',
-            options: {
-              configFile: 'rspack.tsconfig.json'
-            }
+          exclude: /node_modules/,
+          loader: 'builtin:swc-loader',
+          options: {
+            detectSyntax: 'auto'
           }
         }
       ]
@@ -43,7 +42,7 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: ['.ts', '.tsx', '.js']
     },
-    target: 'es2022',
+    target: 'node',
     plugins: [new vtecxutil.uploaderPlugin(env.entry)]
   }
 }

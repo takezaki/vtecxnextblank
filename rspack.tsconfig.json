@@ -9,10 +9,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "esModuleInterop": true,
-    "module": "commonjs",
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
     "target": "ES2022",
     "lib": ["es2022"],
-    "jsx": "react"
+    "jsx": "react",
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "skipLibCheck": true  
   },
   "include": ["./src/server/*"]
 }
