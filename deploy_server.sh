@@ -1,2 +1,2 @@
 #!/bin/sh
-pnpm exec rspack --env entry=/server/hello.ts
+pnpm exec rspack --env entry=/batchjob/hello.ts
