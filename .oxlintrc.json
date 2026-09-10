@@ -50,5 +50,10 @@
     "out/**",
     "coverage/**",
     "next-env.d.ts"
-  ]
+  ],
+
+  "options": {
+    "typeAware": true
+  }
+
 }
