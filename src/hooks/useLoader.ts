@@ -10,7 +10,7 @@ const useLoader = (_is_init_hidden?: boolean) => {
     if (_is_init_hidden === undefined || _is_init_hidden === true) {
       setLoader(false)
     }
-  }, [])
+  }, [_is_init_hidden, setLoader])
 
   return {
     loader,

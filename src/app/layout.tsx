@@ -1,10 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { Providers } from '@/components/providers'
 import { RouterMounting } from '@/components/routermounting'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export async function generateMetadata(): Promise<Metadata> {
   const vtecxUrl = process.env.VTECX_URL ?? ''

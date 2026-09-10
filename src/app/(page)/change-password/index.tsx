@@ -25,7 +25,7 @@ import constant from '@/constants'
  */
 const Main = () => {
   const router = useRouter()
-  const [error, setError] = React.useState<any>('')
+  const [_error, setError] = React.useState<any>('')
 
   const [passreset_token] = useState<string>(
     location.search.split('?_passreset_token=')[1].split('&_RXID=')[0]
@@ -72,7 +72,7 @@ const Main = () => {
   const checkDisabled = React.useCallback(
     (_value?: string) => {
       if (check_password && _value) {
-        setDisabled(!Boolean(password === repassword))
+        setDisabled(password !== repassword)
       } else {
         setDisabled(true)
       }
@@ -84,9 +84,9 @@ const Main = () => {
     checkPassword(password ? password_regexp.test(password) : undefined)
   }, [password])
 
-  React.useEffect(() => {
-    checkDisabled(repassword)
-  }, [check_password, repassword])
+React.useEffect(() => {
+  checkDisabled(repassword)
+}, [repassword, checkDisabled])
 
   return (
     <>

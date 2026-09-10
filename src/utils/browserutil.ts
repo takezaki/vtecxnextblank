@@ -72,7 +72,6 @@ export const requestApi = async (
     // 新規リクエスト実行のための関数（リトライ付き）
     let retry_count = 0
     const doRequest = async (): Promise<any> => {
-      try {
         const response = await fetch(url, requestInit)
         retry_count++
         const status = response.status
@@ -98,9 +97,6 @@ export const requestApi = async (
             return await response.blob()
           }
         }
-      } catch (err: any) {
-        throw err
-      }
     }
 
     // 新規リクエストの Promise を作成し、キャッシュに登録
@@ -118,7 +114,6 @@ export const requestApi = async (
     // GET 以外の場合はキャッシュを利用せずにリクエストを実行
     let retry_count = 0
     const doRequest = async (): Promise<any> => {
-      try {
         const response = await fetch(url, requestInit)
         retry_count++
         const status = response.status
@@ -149,9 +144,6 @@ export const requestApi = async (
             return await response.blob()
           }
         }
-      } catch (err: any) {
-        throw err
-      }
     }
     return await doRequest()
   }

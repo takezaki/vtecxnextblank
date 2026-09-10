@@ -28,7 +28,7 @@ const Main = () => {
   const { setLoader } = useLoader()
 
   const [check_email, setCheckEmail] = React.useState<any>(true)
-  const [error, setError] = React.useState<any>()
+  const [_error, setError] = React.useState<any>()
 
   const sendPassResetMail = async () => {
     // reCAPTCHAトークンを取得
