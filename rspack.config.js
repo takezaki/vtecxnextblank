@@ -1,8 +1,7 @@
-const path = require('path')
 const vtecxutil = require('@vtecx/vtecxutil')
 const confy = require('confy')
 
-module.exports = (env, argv) => {
+module.exports = (env) => {
   let target
   confy.get('$default', function (err, result) {
     if (result) {

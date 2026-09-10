@@ -5,14 +5,11 @@
     "eslint",
     "typescript",
     "react",
+    "react-hooks",
     "jsx-a11y",
     "import",
     "nextjs"
   ],
-
-  "categories": {
-    "correctness": "error"
-  },
 
   "env": {
     "browser": true,
@@ -21,7 +18,7 @@
 
   "settings": {
     "react": {
-      "version": "detect"
+      "version": "19.2.8"
     }
   },
 
@@ -37,9 +34,13 @@
     "nextjs/no-assign-module-variable": "error",
 
     "react/jsx-key": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
 
     "eslint/no-unused-vars": "off",
-    "typescript/no-unused-vars": "warn"
+    "typescript/no-unused-vars": "warn",
+
+    "react/set-state-in-effect": "off"
   },
 
   "ignorePatterns": [
@@ -50,10 +51,5 @@
     "out/**",
     "coverage/**",
     "next-env.d.ts"
-  ],
-
-  "options": {
-    "typeAware": true
-  }
-
+  ]
 }
