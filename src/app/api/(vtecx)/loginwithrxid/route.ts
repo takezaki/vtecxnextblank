@@ -36,7 +36,7 @@ export const GET = async (req:NextRequest):Promise<Response> => {
       resMessage = 'Error occured.'
     }
   }
-  const feed = {'feed' : {'title' : resMessage}}
+  const feed = {'feed' : {'title' : resStatus+' '+resMessage}}
 
   console.log('[api loginwithrxid] end.')
   return vtecxnext.response(200, feed)

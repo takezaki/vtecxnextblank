@@ -47,31 +47,23 @@ const Main = () => {
     setShowRePassword(!showRePassword)
   }
 
-  const checkDisabled = React.useCallback(
-    (value?: string) => {
-      if (check_email && check_password && value) {
-        setDisabled(!Boolean(password === repassword))
-      } else {
-        setDisabled(true)
-      }
-    },
-    [check_password, password, repassword, check_email]
-  )
-
   React.useEffect(() => {
     checkPassword(password ? password_regexp.test(password) : undefined)
   }, [password])
 
   React.useEffect(() => {
-    checkDisabled(repassword)
-  }, [check_email, check_password, repassword])
-
+  if (check_email && check_password && repassword) {
+    setDisabled(password !== repassword)
+  } else {
+    setDisabled(true)
+  }
+}, [check_email, check_password, password, repassword])
   const { loaded, executeRecaptcha } = useReCaptcha()
 
   const router = useRouter()
   const { setLoader } = useLoader()
 
-  const [error, setError] = React.useState<any>()
+  const [_error, setError] = React.useState<any>()
 
   const sendPassResetMail = async () => {
     // reCAPTCHAトークンを取得

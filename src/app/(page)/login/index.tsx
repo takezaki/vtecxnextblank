@@ -26,7 +26,7 @@ const Main = () => {
   const router = useRouter()
   const { loader, setLoader } = useLoader()
 
-  const [error, setError] = React.useState<any>()
+  const [_error, setError] = React.useState<any>()
 
   const { loaded, executeRecaptcha } = useReCaptcha()
 
