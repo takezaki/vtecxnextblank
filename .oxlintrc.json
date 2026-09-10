@@ -1,0 +1,54 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+
+  "plugins": [
+    "eslint",
+    "typescript",
+    "react",
+    "jsx-a11y",
+    "import",
+    "nextjs"
+  ],
+
+  "categories": {
+    "correctness": "error"
+  },
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+
+  "rules": {
+    "nextjs/no-html-link-for-pages": "error",
+    "nextjs/no-img-element": "warn",
+    "nextjs/no-sync-scripts": "error",
+    "nextjs/no-head-element": "warn",
+    "nextjs/no-head-import-in-document": "error",
+    "nextjs/no-document-import-in-page": "error",
+    "nextjs/no-css-tags": "warn",
+    "nextjs/no-typos": "error",
+    "nextjs/no-assign-module-variable": "error",
+
+    "react/jsx-key": "error",
+
+    "eslint/no-unused-vars": "off",
+    "typescript/no-unused-vars": "warn"
+  },
+
+  "ignorePatterns": [
+    ".next/**",
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "out/**",
+    "coverage/**",
+    "next-env.d.ts"
+  ]
+}
