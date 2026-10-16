@@ -29,3 +29,13 @@ minimumReleaseAgeExclude:
   - jotai@3.0.0
   - '@vtecx/vtecxdocument@1.0.4 || 1.0.5 || 1.0.6 || 1.0.7 || 1.0.10'
   - '@vtecx/vtecxnext@3.3.1'
+  - '@next/env@16.4.2'
+  - '@next/swc-darwin-arm64@16.4.2'
+  - '@next/swc-darwin-x64@16.4.2'
+  - '@next/swc-linux-arm64-gnu@16.4.2'
+  - '@next/swc-linux-arm64-musl@16.4.2'
+  - '@next/swc-linux-x64-gnu@16.4.2'
+  - '@next/swc-linux-x64-musl@16.4.2'
+  - '@next/swc-win32-arm64-msvc@16.4.2'
+  - '@next/swc-win32-x64-msvc@16.4.2'
+  - next@16.4.2
